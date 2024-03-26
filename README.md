@@ -12,16 +12,66 @@ Its key insight lies in extracting real usage scenarios of the target method und
 To enhance efficiency and effectiveness, TELPA identifies a set of ineffective tests as counter-examples for LLMs and employs a feedback-based process to iteratively refine these counter-examples.
 Then, TELPA integrates program analysis results and counter-examples into the prompt, guiding LLMs to gain deeper understandings of the semantics of the target method and generate diverse tests that can reach the hard-to-cover branches.
 
-
-
 <img src="figures/overview.pdf" alt="overview" style="zoom:80%;" />
 
 <p align="center">Figure 1: Overview of TELPA</p>
 
 
 
-## Getting Started
+## Example of prompt construction
+
+Given a target method 
 
 
 
-## File Structure
+
+
+## Getting Started!
+
+### Data preparation
+
+TELPA is currently evaluated on a benchmark consisting of 486 modules. And TELPA leverages existing test cases generated in preceding test generation process as counter-examples.
+
+Therefore, you need to first download the [benchmark and the existing test cases](https://drive.google.com/file/d/1iqcAFyMMgggtjmONpyuFmg1-6gBq8y_W/view?usp=drive_link), which have been compressed into one zip file.
+
+Then unzip the zip file, you will get three folders: 
+
+- benchmark: the open-source projects
+- existing_test_cases: existing test cases
+- existing_report: the report information of existing test cases (mapped through file name)
+
+Put these folders under  `data`  folder.
+
+That is, you should have the following folders after this step `./data/benchmark`, `./data/existing_test_cases`, and `./data/existing_report`
+
+
+
+### Test generation
+
+>Note that we leveraged [fastchat](https://github.com/lm-sys/FastChat/tree/main) to run the LLM locally. Therefore, you have to fisrt deploy a LLM in a fastchat way. Assume that the LLM is deployed in a url like **'http:host_ip:port/v1'**
+
+Run `starter.py` to start the generation process. `starter.py` accepts three arguments:
+
+- the path to the existing test cases
+- the part of the modules you want to run
+- the url on which the LLM is deployed
+
+For example, run the command below:
+
+```shell
+python starter.py /path/to/TELPA/data/xxx part1, http:host_ip:port/v1
+```
+
+Then the generation process will begin, and the generated tests and the corresponding report information will be stored under the `data` folder.
+
+
+
+### File Structure
+
+`core` stores the definitions of all the objects used in the artifacts.
+
+`utils` stores utils functions, such as the files used for parsing the AST, etc.
+
+`data` stores the configuration file and the execution results.
+
+`run` is the entry script of the artifacts.

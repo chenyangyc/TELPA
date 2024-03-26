@@ -140,6 +140,7 @@ cython_debug/
 
 # data
 data/*
+other_files/*
 .idea
 .vscode
 .DS_Store
