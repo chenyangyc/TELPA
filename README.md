@@ -47,7 +47,7 @@ Please help me generate new test programs that cover different scenarios or edge
 ### Response
 ```
 
-
+Please refer to [`./data/example.md`](https://github.com/chenyangyc/TELPA/tree/main/data/example.md) to find an example in detail, which is illustrated with a real target method in the benchmark.
 
 
 
