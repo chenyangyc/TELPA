@@ -153,3 +153,4 @@ test_*.py
 # exclude
 !data/configuration.py
 !data/good_modules.csv
+!data/example.md
