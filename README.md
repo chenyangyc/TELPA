@@ -16,41 +16,6 @@ Then, TELPA integrates program analysis results and counter-examples into the pr
 
 <p align="center">Figure 1: Overview of TELPA</p>
 
-
-
-## Example of prompt construction
-
-Our prompting process is two-stage. In the first stage, the LLM is insturcuted to summarize the functionality of the target method with a given spcific context, which is constructed with the method-invocation analysis results:
-
-```
-### User Message
-There is a python function ‘{target method}’. The context of the function is ```{methods in the method-invocation sequence and all associated methods}```"
-What is the functionality of the function? Do not write any unit tests in your response.
-
-### Response
-```
-
-Then in the second stage, the LLM is provided with the counter-examples and instructed to generate new different tests:
-
-```
-### User Message
-There is a python function ‘{target method}’. The information of the function is ```{methods in the method-invocation sequence and all associated methods}```"
-What is the functionality of the function? Do not write any unit tests in your response.
-
-### Response
-<stage1 response>
-
-### User Message
-The test programs below are designed to test the function '{target method}'. They can cover different part of the function. The contents of the test programs are {counter-examples}
-Please help me generate new test programs that cover different scenarios or edge cases. 
-
-### Response
-```
-
-Please refer to [`./data/example.md`](https://github.com/chenyangyc/TELPA/tree/main/data/example.md) to find an example in detail, which is illustrated with a real target method in the benchmark.
-
-
-
 ## Getting Started!
 
 ### Data preparation
