@@ -1,0 +1,15 @@
+{
+    "api_base": "http://172.28.102.8:8888/v1",
+    "code_base": "/data/telpa_java",
+    "done_project": "data/done_project",
+    "json_res_dir": "data/res_info",
+    "tmp_test_dir": "data/tmp_test",
+    "path_mappings": {
+        "jfreechart": {
+            "loc": "/data/jfreechart",
+            "src": "src/main/java",
+            "test": "src/test/java",
+            "focal_method": "/data/telpa_java/data/jfreechart_focal_method.jsonl"
+        }
+    }
+}

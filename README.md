@@ -2,6 +2,10 @@
 
 Welcome to the homepage of **TELPA**! This the implementation of our research "LLM-based Testing for Hard-to-Cover Branches via Program-Analysis-Enhanced Prompting".
 
+## News
+
+We have adapted TELPA for the Java language. See the `telpa_java` folder for details.
+
 
 
 ## Introduction
