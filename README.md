@@ -1,6 +1,6 @@
 # TELPA (TEst generation via Llm and Program Analysis)
 
-Welcome to the homepage of **TELPA**! This the implementation of our research "LLM-based Testing for Hard-to-Cover Branches via Program-Analysis-Enhanced Prompting".
+Welcome to the homepage of **TELPA**! This the implementation of our research "Advancing Code Coverage: Incorporating Program Analysis with Large Language Models".
 
 ## News
 
