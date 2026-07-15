@@ -3,9 +3,8 @@
 Welcome to the homepage of **TELPA**! This the implementation of our research "Advancing Code Coverage: Incorporating Program Analysis with Large Language Models".
 
 ## News
-
-We have adapted TELPA for the Java language. See the `telpa_java` folder for details.
-
+- We have refined and integrated TELPA into WiseUT. For more details, usage examples, and Docker images, please refer to the coverage_module in the WiseUT repository: https://github.com/chenyangyc/WiseUT.
+- We have adapted TELPA for the Java language. See the `telpa_java` folder for details.
 
 
 ## Introduction
